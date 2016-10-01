@@ -23,8 +23,10 @@ Build-Depends: debhelper (>= 9),
  libvtk6-dev,
  ocl-icd-opencl-dev,
  python-dev,
+ python3-dev,
  dh-python,
  python-numpy,
+ python3-numpy,
  doxygen,
  ant, default-jdk, javahelper
 Standards-Version: 3.9.6
@@ -1429,7 +1431,7 @@ Depends: ${python:Depends}, ${shlibs:Depends}, ${misc:Depends}, python-numpy-abi
 Provides: ${python:Provides}
 Replaces: python2.3-opencv (<= 0.9.7-3)
 Conflicts: python2.3-opencv (<= 0.9.7-3)
-Description: Python bindings for the computer vision library
+Description: Python bindings for the computer vision library (Python 2)
  This package contains Python bindings for the OpenCV (Open Computer Vision)
  library.
  .
@@ -1442,4 +1444,43 @@ Description: Python bindings for the computer vision library
  of high level functionalities for video acquisition, image processing and
  analysis, structural analysis, motion analysis and object tracking, object
  recognition, camera calibration and 3D reconstruction.
+ .
+ This package provides the Python 2 version of the library.
 
+Package: python3-opencv
+Section: python
+Architecture: any
+Depends: ${python3:Depends}, ${shlibs:Depends}, ${misc:Depends},
+	python3-numpy,
+	libopencv-viz3.1 (= ${binary:Version}),
+	libopencv-shape3.1 (= ${binary:Version}),
+	libopencv-superres3.1 (= ${binary:Version}),
+	libopencv-stitching3.1 (= ${binary:Version}),
+	libopencv-videostab3.1 (= ${binary:Version}),
+	libopencv-objdetect3.1 (= ${binary:Version}),
+	libopencv-photo3.1 (= ${binary:Version}),
+	libopencv-video3.1 (= ${binary:Version}),
+	libopencv-calib3d3.1 (= ${binary:Version}),
+	libopencv-features2d3.1 (= ${binary:Version}),
+	libopencv-flann3.1 (= ${binary:Version}),
+	libopencv-ml3.1 (= ${binary:Version}),
+	libopencv-highgui3.1 (= ${binary:Version}),
+	libopencv-videoio3.1 (= ${binary:Version}),
+	libopencv-imgcodecs3.1 (= ${binary:Version}),
+	libopencv-imgproc3.1 (= ${binary:Version})
+Provides: ${python3:Provides}
+Description: Python bindings for the computer vision library (Python 3)
+ This package contains Python bindings for the OpenCV (Open Computer Vision)
+ library.
+ .
+ The Open Computer Vision Library is a collection of algorithms and sample
+ code for various computer vision problems. The library is compatible with
+ IPL (Intel's Image Processing Library) and, if available, can use IPP
+ (Intel's Integrated Performance Primitives) for better performance.
+ .
+ OpenCV provides low level portable data types and operators, and a set
+ of high level functionalities for video acquisition, image processing and
+ analysis, structural analysis, motion analysis and object tracking, object
+ recognition, camera calibration and 3D reconstruction.
+ .
+ This package provides the Python 3 version of the library.

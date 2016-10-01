@@ -1,8 +1,10 @@
-opencv (3.1.0+dfsg-1~exp1) UNRELEASED; urgency=medium
+opencv (3.1.0+dfsg-1~xenial1) xenial; urgency=medium
 
-  * Update to 3.1.0.
+  * New upstream release (3.1.0)
+  * Rebuild for xenial
+  * Add python3 support
 
- -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Sat, 25 Jun 2016 06:15:45 +0900
+ -- Sebastien Badia <seb@sebian.fr>  Fri, 30 Sep 2016 16:27:20 +0000
 
 opencv (3.0.0+dfsg-1~exp5) experimental; urgency=medium
 
